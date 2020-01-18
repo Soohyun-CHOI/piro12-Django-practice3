@@ -8,5 +8,22 @@
     <h1>{{ article.title }}</h1>
     <p>{{ article.content }}</p>
     <p>{{ article.created_at }}</p>
+
+    <form action="/articles/update/{{ article.id }}/">
+        {% csrf_token %}
+        <input type="submit" value="수정하기">
+    </form>
+
+    <form action="/articles/delete/{{ article.id }}/" method="POST">  <!-- 앞에 / 안 붙이면 원래 url 뒤에 붙음! -->
+        {% csrf_token %}
+        <input type="submit" value="삭제하기">
+    </form>
+
+    <br />
+
+    <form action="/articles/">  <!-- 앞에 / 안 붙이면 원래 url 뒤에 붙음! -->
+        {% csrf_token %}
+        <input type="submit" value="목록">
+    </form>
 </body>
 </html>

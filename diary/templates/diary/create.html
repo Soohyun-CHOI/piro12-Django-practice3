@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+</head>
+<body>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <p>제목: <input type="text" name="title"></p>
+        <p>내용: <textarea type="text" name="content"></textarea></p>
+        <input type="submit" />  <!-- action에 제출 -->
+    </form>
+</body>
+</html>

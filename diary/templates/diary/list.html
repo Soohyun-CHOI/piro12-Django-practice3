@@ -8,7 +8,7 @@
     <h1>Hello Articles</h1>
     <ul>
         {% for article in articles %}
-            <li>{{ article.title }}</li>
+            <li><a href="{{ article.id }}/">{{ article.title }}</a></li>
         {% endfor %}
     </ul>
 </body>
