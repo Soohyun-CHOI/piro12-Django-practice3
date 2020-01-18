@@ -8,3 +8,11 @@ def list(request):
         "articles": queryset
     }
     return render(request, "diary/list.html", ctx)
+
+
+def read(request, pk):
+    article = Article.objects.get(id=pk)
+    ctx = {
+        "article": article
+    }
+    return render(request, "diary/read.html", ctx)
