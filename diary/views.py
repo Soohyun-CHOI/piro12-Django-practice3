@@ -1,5 +1,10 @@
 from django.shortcuts import render
+from diary.models import Article
 
 
 def list(request):
-    render(request, "diary/list.html")
+    queryset = Article.objects.all()
+    ctx = {
+        "articles": queryset
+    }
+    return render(request, "diary/list.html", ctx)

@@ -6,5 +6,8 @@
 </head>
 <body>
     <h1>Hello Articles</h1>
+    {% for article in articles %}
+        {{ article.title }}
+    {% endfor %}
 </body>
 </html>
