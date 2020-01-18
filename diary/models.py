@@ -12,6 +12,6 @@ class Article(models.Model):
     title = models.CharField(max_length=20, verbose_name="일기 제목", help_text="일기 제목")
     content = models.TextField(verbose_name="일기 내용", help_text="일기 내용")
 
-    created_at = models.DateTimeField()
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="작성일", help_text="작성일")
     # DateField: 날짜만
     # DateTimeField: 날짜 + 시간
